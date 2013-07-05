@@ -1,0 +1,3 @@
+[submodule "/home/rmp/.vim/bundle/nerdcommenter"]
+	path = /home/rmp/.vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
