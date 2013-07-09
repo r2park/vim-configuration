@@ -21,6 +21,10 @@ if ! has('gui_running')
     augroup END
 endif
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 " Fix the O delay when inserting line above
 set timeoutlen=900
 
@@ -37,6 +41,10 @@ imap <C-@> <C-Space>
 " Configure the Status Line
 "set statusline=%{fugitive#statusline()} 
 
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
@@ -51,7 +59,3 @@ if 'VIRTUAL_ENV' in os.environ:
 	'bin/activate_this.py')
 	execfile(activate_this, dict(__file__=activate_this))
 EOF
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup

@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/rmp/.local/lib/python2.7/site-packages/powerline/bindings/tmux'
+let g:netrw_dirhist_2='/home/rmp/Documents/git/simple/motif/client'
+let g:netrw_dirhist_3='/home/rmp/.local/lib/python2.7/site-packages/powerline'
