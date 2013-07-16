@@ -7,7 +7,7 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 set background=dark
-se t_Co=256
+set t_Co=16
 
 " Powerline stuff
 set laststatus=2   " Always show the statusline
@@ -28,7 +28,7 @@ python del powerline_setup
 " Fix the O delay when inserting line above
 set timeoutlen=900
 
-"let g:solarized_termcolors=16
+let g:solarized_termcolors=16
 colorscheme solarized
 
 " Give a shortcut key to NERD Tree
@@ -44,6 +44,15 @@ imap <C-@> <C-Space>
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Set font to Inconsolatas
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
