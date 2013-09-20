@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/rmp/.local/lib/python2.7/site-packages/powerline/bindings/tmux'
 let g:netrw_dirhist_2='/home/rmp/Documents/git/simple/motif/client'
 let g:netrw_dirhist_3='/home/rmp/.local/lib/python2.7/site-packages/powerline'
 let g:netrw_dirhist_4='/home/rmp/.vim/.git'
 let g:netrw_dirhist_5='/home/rmp'
 let g:netrw_dirhist_6='/home/rmp/Documents/git/meteor-dev/examples'
+let g:netrw_dirhist_7='/tmp'
+let g:netrw_dirhist_8='/home/rmp/.vim/.git'

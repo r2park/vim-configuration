@@ -9,6 +9,7 @@ syntax on
 set background=dark
 set t_Co=16
 
+set backspace=indent,eol,start
 " Powerline stuff
 set laststatus=2   " Always show the statusline
 set noshowmode
@@ -25,8 +26,11 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
-" Fix the O delay when inserting line above
+
+" Fix the 'O' delay when inserting line above
 set timeoutlen=900
+
+imap <special> jj <Esc>
 
 let g:solarized_termcolors=16
 colorscheme solarized
@@ -68,3 +72,4 @@ if 'VIRTUAL_ENV' in os.environ:
 	'bin/activate_this.py')
 	execfile(activate_this, dict(__file__=activate_this))
 EOF
+let g:pymode_lint_mccabe_complexity = 9
