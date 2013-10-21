@@ -40,3 +40,6 @@
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim-indent-guides"]
+	path = vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
