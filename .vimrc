@@ -8,8 +8,8 @@ filetype plugin indent on
 syntax on
 set background=dark
 set t_Co=16
-
 set backspace=indent,eol,start
+
 " Powerline stuff
 set laststatus=2   " Always show the statusline
 set noshowmode
@@ -30,13 +30,11 @@ python del powerline_setup
 " Fix the 'O' delay when inserting line above
 set timeoutlen=900
 
-imap <special> jj <Esc>
+set noto
+inoremap jj <Esc>
 
 let g:solarized_termcolors=16
 colorscheme solarized
-
-" Give a shortcut key to NERD Tree
-map <F2> :NERDTreeToggle<CR>
 
 " Remap autocompletion to C-Space
 imap <C-Space> <C-x><C-u>
@@ -44,6 +42,9 @@ imap <C-@> <C-Space>
 
 " Configure the Status Line
 "set statusline=%{fugitive#statusline()} 
+
+" Taglist
+nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -57,6 +58,9 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+" vim-indent-guides settings
+let g:indent_guides_guide_size=1
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
@@ -72,4 +76,6 @@ if 'VIRTUAL_ENV' in os.environ:
 	'bin/activate_this.py')
 	execfile(activate_this, dict(__file__=activate_this))
 EOF
-let g:pymode_lint_mccabe_complexity = 9
+let g:pymode_lint_mccabe_complexity = 20
+let g:pymode_lint_write = 0
+
