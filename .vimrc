@@ -79,3 +79,7 @@ EOF
 let g:pymode_lint_mccabe_complexity = 20
 let g:pymode_lint_write = 0
 
+" DISABLE some pymode stuff
+let pymode_lint=0
+let pymode_rope=0
+let pymode_virtualenv=0
