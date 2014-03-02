@@ -49,3 +49,6 @@
 [submodule "emmet-vim"]
 	path = emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/systemverilog"]
+	path = bundle/systemverilog
+	url = git://github.com/nachumk/systemverilog.vim
