@@ -58,3 +58,9 @@
 [submodule "vim-markdown"]
 	path = vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "supertab"]
+	path = supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
