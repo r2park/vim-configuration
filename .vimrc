@@ -86,3 +86,4 @@ let pymode_virtualenv=0
 
 " ctags tag path
 set tags=./tags,tags,/home/rmp/Dropbox/field_intel/embedded/tags
+
