@@ -10,21 +10,21 @@ set background=dark
 set t_Co=16
 set backspace=indent,eol,start
 
-" Powerline stuff
-set laststatus=2   " Always show the statusline
-set noshowmode
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" Powerline stuff - UPDATE 12-25-2014: switched over to using vim-airline
+"set laststatus=2   " Always show the statusline
+"set noshowmode
+"if ! has('gui_running')
+"    set ttimeoutlen=10
+"    augroup FastEscape
+"        autocmd!
+"        au InsertEnter * set timeoutlen=0
+"        au InsertLeave * set timeoutlen=1000
+"    augroup END
+"endif
+"
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 
 " Fix the 'O' delay when inserting line above
@@ -35,13 +35,6 @@ inoremap jj <Esc>
 
 let g:solarized_termcolors=16
 colorscheme solarized
-
-" Remap autocompletion to C-Space
-imap <C-Space> <C-x><C-u>
-imap <C-@> <C-Space>
-
-" Configure the Status Line
-"set statusline=%{fugitive#statusline()} 
 
 " Taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
@@ -87,3 +80,38 @@ let pymode_virtualenv=0
 " ctags tag path
 set tags=./tags,tags,/home/rmp/Dropbox/field_intel/embedded/tags
 
+" Syntastic Configuration
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_no_default_include_dirs = 1
+let g:syntastic_c_auto_refresh_includes = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+
+" EasyMotion Configuration
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+"nmap s <Plug>(easymotion-s2)
+
+" Turn on case sensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+map <Leader>w <Plug>(easymotion-w)
+map <Leader>b <Plug>(easymotion-b)
+
+" Gundo Configuration
+nnoremap <F5> :GundoToggle<CR>
+
+" Airline Configuration
+let g:airline_powerline_fonts=1
+set laststatus=2
