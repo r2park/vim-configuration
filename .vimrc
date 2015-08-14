@@ -9,6 +9,7 @@ syntax on
 set background=dark
 set t_Co=16
 set backspace=indent,eol,start
+set viminfo=%,'50,\"100,:100,n~/.viminfo
 
 " Powerline stuff - UPDATE 12-25-2014: switched over to using vim-airline
 "set laststatus=2   " Always show the statusline
@@ -107,11 +108,13 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 map <Leader>w <Plug>(easymotion-w)
-map <Leader>b <Plug>(easymotion-b)
+" this conflicts with Command-T
+"map <Leader>b <Plug>(easymotion-b)
 
 " Gundo Configuration
 nnoremap <F5> :GundoToggle<CR>
 
 " Airline Configuration
 let g:airline_powerline_fonts=1
+let g:airline_theme='badwolf'
 set laststatus=2
