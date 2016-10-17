@@ -79,7 +79,7 @@ let pymode_rope=0
 let pymode_virtualenv=0
 
 " ctags tag path
-set tags=./tags,tags,/home/rmp/Dropbox/field_intel/embedded/tags
+set tags=./tags,tags,/home/rmp/Dropbox/field_intel/embedded/Q4000/FI\ API/tags
 
 " Syntastic Configuration
 let g:syntastic_c_check_header = 1
