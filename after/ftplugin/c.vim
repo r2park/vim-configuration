@@ -1,5 +1,5 @@
-setlocal sw=2
-setlocal ts=2
+setlocal sw=4
+setlocal ts=4
 setlocal et
 setlocal ai
 setlocal smarttab
