@@ -118,3 +118,6 @@ nnoremap <F5> :GundoToggle<CR>
 let g:airline_powerline_fonts=1
 let g:airline_theme='badwolf'
 set laststatus=2
+
+" vim-javascript
+let g:javascript_plugin_flow=1
